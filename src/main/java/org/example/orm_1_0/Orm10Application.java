@@ -19,9 +19,9 @@ public class Orm10Application implements CommandLineRunner {
     private ProductRepository productRepository;
     @Override
     public void run(String... args) throws Exception {
-        productRepository.save(new Product(null,"Macbook Air M3",11000,1));
-        productRepository.save(new Product(null,"Macbook Air M2",13000,14));
-        productRepository.save(new Product(null,"Macbook Air M1",18000,10));
+//        productRepository.save(new Product(null,"Macbook Air M3",11000,1));
+//        productRepository.save(new Product(null,"Macbook Air M2",13000,14));
+//        productRepository.save(new Product(null,"Macbook Air M1",18000,10));
         List<Product> products = productRepository.findAll();
         products.forEach(System.out::println);
 
@@ -31,6 +31,17 @@ public class Orm10Application implements CommandLineRunner {
         System.out.println(" product name :"+ product.getName());
         System.out.println(" product price :"+product.getPrice());
         System.out.println("product quantity :"+product.getQuantity());
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-");
+        List<Product> products1 = productRepository.findByNameContains("M2");
+        products1.forEach(p->{
+            System.out.println(p);
+        });
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++");
+
+        List<Product> products2 = productRepository.findByNameContains("M2");
+        products2.forEach(p->{
+            System.out.println(p);
+        });
 
 
        
