@@ -1,35 +1,59 @@
-ORM_1_0
+Table of Contents
 
-A Spring Boot application demonstrating Hibernate ORM and JPA integration with H2 in-memory database.
+Overview
+Getting Started
+Prerequisites
+Installation
+Usage
+Testing
+Overview
 
-Features
+ORM_2 is a streamlined developer tool that showcases core data management capabilities within a Spring Boot architecture, leveraging Hibernate ORM and JPA. It provides a solid foundation for managing product data, complete with RESTful endpoints and in-memory testing.
 
-•  JPA Entity Management: Product entity with auto-generated IDs
-•  Spring Data JPA: Repository pattern for database operations
-•  H2 Database: In-memory database for quick testing
-•  CommandLineRunner: Automatic data seeding and retrieval on startup
+Why ORM_2?
 
-Technologies
+This project simplifies the development and testing of ORM-based data layers. The core features include:
 
-•  Spring Boot
-•  Hibernate/JPA
-•  H2 Database
-•  Lombok
-•  Maven
+🧩 Modular Data Layer: Defines the Product entity and repository interfaces for seamless data management.
+🚀 Fast Testing: Utilizes an in-memory H2 database for quick setup and iteration.
+🌐 RESTful APIs: Provides endpoints for retrieving product data, facilitating easy integration.
+🔧 Spring Boot Integration: Combines Hibernate ORM and JPA for robust persistence.
+✅ Validation & Testing: Includes setup validation to ensure reliable application initialization.
+Getting Started
 
-What It Does
+Prerequisites
 
-The application automatically:
-1. Creates a Product table in H2 database
-2. Saves 3 Macbook products with different specs
-3. Retrieves and displays all products
-4. Fetches a specific product by ID and displays its details
+This project requires the following dependencies:
 
-Configuration
+Programming Language: Java
+Package Manager: Maven
+Installation
 
-•  Port: 8086
-•  H2 Console: Enabled at http://localhost:8086/h2-console
-•  Database URL: jdbc:h2:mem:products_db
+Build ORM_2 from the source and install dependencies:
 
-Running the Application
-mvn spring-boot:run
+Clone the repository:
+
+❯ git clone https://github.com/senBenz/ORM_2
+Navigate to the project directory:
+
+❯ cd ORM_2
+Install the dependencies:
+
+Using maven:
+
+❯ mvn install
+Usage
+
+Run the project with:
+
+Using maven:
+
+mvn exec:java
+Testing
+
+Orm_2 uses the {test_framework} test framework. Run the test suite with:
+
+Using maven:
+
+mvn test
+⬆ Return
